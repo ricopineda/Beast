@@ -49,4 +49,19 @@ extension ViewController: UITableViewDataSource {
         cell.textLabel?.text = task[indexPath.row]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Section: \(indexPath.section) and Row: \(indexPath.row)")
+        task.remove(at: indexPath.row)
+        tableView.reloadData()
+    }
+   
 }
+
+
+
+
+
+
+
+
